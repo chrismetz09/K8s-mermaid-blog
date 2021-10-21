@@ -28,13 +28,13 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 ## Mermaid.js 
 
-Mermaid is a package for generating diagrams using text in markdown files. Here are some of the features I love about Mermaid:
+[Mermaid](https://mermaid-js.github.io/mermaid/#/) is a package for generating diagrams using text in markdown files. Here are some of the features I love about Mermaid:
 
 **Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your mermaid code with the `{{< mermaid >}}` shortcode.  
 
 **Comes with the K8s docs website Hugo theme**. Works out of the box! 
 
-**On-line live editor** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. Once Hugo builds the site, you will see your beautiful diagram rendered on the page. You should always use the live editor to create and edit diagrams.
+**[On-line live editor](https://mermaid-js.github.io/mermaid-live-editor)** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. After Hugo builds the site, you will see your beautiful diagram rendered on the page. You should always use the live editor to create and edit diagrams.
 
 **Share diagram URLs**. The live editor generates a URL for each saved diagram. You can share this link with colleagues to collaborate on diagram creation and editing. 
 
