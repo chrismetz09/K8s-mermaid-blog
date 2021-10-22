@@ -46,7 +46,7 @@ All you need to start using Mermaid is your favorite markdown editor and access 
 
 Let's check out some examples. I'll show the figure, live-editor link and the mermaid code. 
 
-⚠️  In the example code blocks below, I have included the `{{< mermaid >}}` shortcode tags. You must include the shortcode tags to render Mermaid diagrams only in K8s docs. The live editor does not recognize shortcodes. Your diagram will not render in the live editor if you include the shortcodes.    
+⚠️ **You can't use Hugo shortcode tags in the live editor**. You do need shortcode tags to render the diagram only in K8s docs as shown the code blocks below.
 
 Page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
