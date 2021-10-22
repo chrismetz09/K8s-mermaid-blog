@@ -32,7 +32,7 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) is a package for generating diagrams using text in markdown files. Here are some of the features I love about Mermaid:
 
-* **Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your mermaid code with the `{{< mermaid >}}` shortcode.  
+* **Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your Mermaid code inside `{{< mermaid >}}{{< /mermaid >}}` shortcode tags. This tells Hugo to run your Mermaid code during the build process.  
 
 * **Comes with the K8s docs website Hugo theme**. Works out of the box! 
 
@@ -42,7 +42,7 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 * **Format versatilty**. You can choose from a suite of diagram formats to fit your needs including flowhcart, sequence, state, Gantt and pie chart formats.
 
-* **PR streamlining**. You should treat Mermaid code as documentation text subject to the usual PR processes. Conversely, PRs involving svg diagrams require the participation of the diagram author to add or modify diagrams. This extra step complicates the review process, especially if the author of the original diagram is not available.   
+* **PR streamlining**. You should treat Mermaid code as documentation text subject to the usual Conversely, PRs involving svg diagrams require the participation of the diagram author to add or modify diagrams. This extra step complicates the review process, especially if the author of the original diagram is not available. 
 
 * **Excellent documentation**. Simple text, multiple examples and diagrams included :-)
 
@@ -50,15 +50,15 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 ## What do I need to start using Mermaid?
 
-You need your favorite markdown editor and access to the live editor.  
+You need your favorite markdown editor, knowledge on how to use Hugo, familiarity with Hugo shortcodes and access to the live editor.  
 
 ---
 
 ## Examples
 
-Let's check out some examples. I'll show the figure, live-editor link and the mermaid code. 
+Let's check out some examples. I'll show the figure, live editor link and the mermaid code. 
 
-⚠️ **You can't use Hugo shortcode tags in the live editor**. You do need shortcode tags to render the diagram only in K8s docs as shown the code blocks below.
+⚠️ **You can't use Hugo shortcode tags in the live editor**. You do need shortcode tags to render the diagram only in K8s docs. I have omitted the tags in the code blocks below to simplify cut/paste wit the live editor.
 
 Page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
@@ -69,7 +69,6 @@ Page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/
 Code:
 
 ```mermaid
-{{< mermaid >}}
 graph LR;
  client([client])-. Ingress-managed <br> load balancer .->ingress[Ingress];
  ingress-->|routing rule|service[Service];
@@ -84,7 +83,6 @@ graph LR;
  class ingress,service,pod1,pod2 k8s;
  class client plain;
  class cluster cluster;
-{{</ mermaid >}}
 ```
 
 ---
@@ -97,7 +95,6 @@ Page: [Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/work
 
 code:
 ```mermaid
-{{<mermaid>}}
 graph TB
 subgraph "zoneB"
    p3(Pod) --> n3(Node3)
@@ -113,7 +110,6 @@ classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
 classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
 class n1,n2,n3,n4,p1,p2,p3 k8s;
 class zoneA,zoneB cluster;
-{{< /mermaid >}}
 ```
 
 ---
@@ -127,7 +123,6 @@ A [recent talk at Kubecon](https://kccncna2021.sched.com/event/lV37/beyond-block
 code:
 
 ```mermaid
-{{< mermaid >}}
 %%{init:{"theme":"neutral"}}%%
 sequenceDiagram
     actor me
@@ -149,7 +144,6 @@ sequenceDiagram
     kubelet->>container: 10. start container
     kubelet->>apiSrv: 11. update pod status
     apiSrv-->>etcd: 12. save new state
-{{< /mermaid >}}
 ```
 
 ---
