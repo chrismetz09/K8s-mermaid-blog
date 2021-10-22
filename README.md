@@ -12,11 +12,11 @@ Diagram of topics covered in this blog.
 
 ## Why are diagrams useful for documentation?
 
-**Friendly entry point**. Greeting readers with a page full of text can be intimidating to those new to Kubernetes, software engineering and tech writing.  
+* **Friendly entry point**. Greeting readers with a page full of text can be intimidating to those new to Kubernetes, software engineering and tech writing.  
 
-**Faster grasp of concepts** A diagram can serve as a roadmap for details covered in the accompanying text.
+* **Faster grasp of concepts** A diagram can serve as a roadmap for details covered in the accompanying text.
 
-**Better retention** Humans remember pictures better than words.
+* **Better retention** Humans remember pictures better than words.
 
 Most importantly, readers **acquire the confidence to explore further**. "Wow! Okay I get this. What's next? Maybe I can contribute."
 
@@ -30,15 +30,25 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) is a package for generating diagrams using text in markdown files. Here are some of the features I love about Mermaid:
 
-**Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your mermaid code with the `{{< mermaid >}}` shortcode.  
+* **Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your mermaid code with the `{{< mermaid >}}` shortcode.  
 
-**Comes with the K8s docs website Hugo theme**. Works out of the box! 
+* **Comes with the K8s docs website Hugo theme**. Works out of the box! 
 
-**[On-line live editor](https://mermaid-js.github.io/mermaid-live-editor)** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. After Hugo builds the site, you will see your beautiful diagram rendered on the page. You should always use the live editor to create and edit diagrams.
+* **[On-line live editor](https://mermaid-js.github.io/mermaid-live-editor)** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. After Hugo builds the site, you will see your beautiful diagram rendered on the page. You should always use the live editor to create and edit diagrams.
 
-**Share diagram URLs**. The live editor generates a URL for each saved diagram. You can share this link with colleagues to collaborate on diagram creation and editing. 
+* **Share diagram URLs**. The live editor generates a URL for each saved diagram. You can share this link with colleagues to collaborate on diagram creation and editing. 
 
-All you need to start using Mermaid is your favorite markdown editor and access to the live editor.
+* **Format versatilty**. You can choose from a suite of diagram formats to fit your needs including flowhcart, sequence, state, Gantt and pie chart formats.
+
+* **PR streamlining**. You should treat Mermaid code as documentation text subject to the usual PR processes. Conversely, PRs involving svg diagrams require the participation of the diagram author to add or modify diagrams. This extra step complicates the review process, especially if the author of the original diagram is not available.   
+
+* **Excellent documentation**. Simple text, multiple examples and diagrams included :-)
+
+---
+
+## What do I need to start using Mermaid?
+
+You need your favorite markdown editor and access to the live editor.  
 
 ---
 
@@ -142,7 +152,9 @@ sequenceDiagram
 
 ---
 
-Mermaid provides a simple, open and transparent method for the community to add, edit and collaborate on figures for new or existing documents. Hope this blog inspires you to create and include diagrams in your documentation. New readers, new contributors and even experienced software engineers will thank you. 
+Mermaid provides a simple, open and transparent tool for the community to add, edit and collaborate on diagrams for new or existing documentation. Hope this blog inspires you to create and include diagrams in your documentation. New readers, new contributors and even experienced software engineers will thank you.
+
+Mermaid rocks!!
 
 
 
