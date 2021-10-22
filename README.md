@@ -2,6 +2,8 @@
 
 By Chris Metz and Tim Bannister
 
+---
+
 Diagram of topics covered in this blog.
 
 ![topics](images/mermaid-blog-outline.svg)
@@ -14,9 +16,9 @@ Diagram of topics covered in this blog.
 
 * **Friendly entry point**. Greeting readers with a page full of text can be intimidating to those new to Kubernetes, software engineering and tech writing.  
 
-* **Faster grasp of concepts** A diagram can serve as a roadmap for details covered in the accompanying text.
+* **Faster grasp of concepts.** A diagram can serve as a roadmap for details covered in the accompanying text.
 
-* **Better retention** Humans remember pictures better than words.
+* **Better retention.** Humans remember pictures better than words.
 
 Most importantly, readers **acquire the confidence to explore further**. "Wow! Okay I get this. What's next? Maybe I can contribute."
 
@@ -34,7 +36,7 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 * **Comes with the K8s docs website Hugo theme**. Works out of the box! 
 
-* **[On-line live editor](https://mermaid-js.github.io/mermaid-live-editor)** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. After Hugo builds the site, you will see your beautiful diagram rendered on the page. You should always use the live editor to create and edit diagrams.
+* **[On-line live editor](https://mermaid-js.github.io/mermaid-live-editor)** to dynamically create and edit diagrams. The live editor shows the code and the rendered diagram. Once you are satisfied with the diagram, just cut/paste the code into the page. After Hugo builds the site, you will see your beautiful diagram rendered on the page. __You should always use the live editor to create and edit diagrams.__
 
 * **Share diagram URLs**. The live editor generates a URL for each saved diagram. You can share this link with colleagues to collaborate on diagram creation and editing. 
 
