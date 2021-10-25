@@ -4,7 +4,7 @@ By Chris Metz and Tim Bannister
 
 ---
 
-Diagram of topics covered in this blog.
+Topics covered in this blog.
 
 ![topics](images/mermaid-blog-outline.svg)
 
@@ -22,7 +22,7 @@ Diagram of topics covered in this blog.
 
 Most importantly, readers **acquire the confidence to explore further**. "Wow! Okay I get this. What's next? Maybe I can contribute."
 
-There are many drawing tools out there. Traditionally, you create a diagram, save it as png or svg file and then embed the file in the documentation. This takes time, skills vary, and complicates collaboration between contributors and reviewers. 
+There are many drawing tools choose from. Traditionally, you create a diagram, save it as png or svg file and then embed the file in the documentation. This takes time, skills vary, and complicates collaboration between contributors and reviewers. 
 
 What if I told you there is a package that comes with the Kubernetes website that allows you to generate simple diagrams using a markdown-like syntax?  
 
