@@ -14,9 +14,9 @@ Topics covered in this blog.
 
 ## Why are diagrams useful for documentation?
 
-* **Friendly entry point**. Greeting readers with a page full of text can be intimidating to those new to Kubernetes, software engineering and tech writing.  
+* **Friendly landing spot**. Greeting readers with a page full of text can be intimidating to those new to Kubernetes, software engineering and tech writing.  
 
-* **Faster grasp of concepts.** A diagram can serve as a roadmap for details covered in the accompanying text.
+* **Faster grasp of concepts.** A diagram can serve as a visual roadmap for details covered in the accompanying text.
 
 * **Better retention.** Humans remember pictures better than words.
 
@@ -24,13 +24,13 @@ Most importantly, readers **acquire the confidence to explore further**. "Wow! O
 
 There are many drawing tools choose from. Traditionally, you create a diagram, save it as png or svg file and then embed the file in the documentation. This takes time, skills vary, and complicates collaboration between contributors and reviewers. 
 
-What if I told you there is a package that comes with the Kubernetes website that allows you to generate simple diagrams using a markdown-like syntax?  
+What if I told you there is a package that allows you to generate simple diagrams using a markdown-like syntax?  
 
 ---
 
 ## Mermaid.js 
 
-[Mermaid](https://mermaid-js.github.io/mermaid/#/) is a package for generating diagrams using text in markdown files. Here are some of the features I love about Mermaid:
+[Mermaid](https://mermaid-js.github.io/mermaid/#/) is a package for generating diagrams using text in markdown files. Here are some of the features we love about Mermaid:
 
 * **Inline code syntax** you can add and edit in the page markdown. Note that you need to encapsulate your Mermaid code inside `{{< mermaid >}}{{< /mermaid >}}` shortcode tags. This tells Hugo to run your Mermaid code during the build process.  
 
@@ -42,7 +42,7 @@ What if I told you there is a package that comes with the Kubernetes website tha
 
 * **Format versatilty**. You can choose from a suite of diagram formats to fit your needs including flowhcart, sequence, state, Gantt and pie chart formats.
 
-* **PR streamlining**. You should treat Mermaid code as documentation text subject to the usual Conversely, PRs involving svg diagrams require the participation of the diagram author to add or modify diagrams. This extra step complicates the review process, especially if the author of the original diagram is not available. 
+* **PR streamlining**. You should treat Mermaid code as documentation text subject to the usual PR processes. Conversely, PRs involving svg diagrams require the participation of the diagram author to add or modify diagrams. This extra step complicates the review process, especially if the author of the original diagram is not available. 
 
 * **Excellent documentation**. Simple text, multiple examples and diagrams included :-)
 
@@ -56,9 +56,9 @@ You need your favorite markdown editor, knowledge on how to use Hugo, familiarit
 
 ## Examples
 
-Let's check out some examples. I'll show the figure, live editor link and the mermaid code. 
+Let's check out some examples. We'll show the figure, live editor link and the mermaid code. 
 
-⚠️ **You can't use Hugo shortcode tags in the live editor**. You do need shortcode tags to render the diagram only in K8s docs. I have omitted the tags in the code blocks below to simplify cut/paste wit the live editor.
+⚠️ **You can't use Hugo shortcode tags in the live editor**. You need shortcode tags to render the diagram only in K8s docs. We have omitted the tags in the code blocks below.
 
 Page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
@@ -84,6 +84,21 @@ graph LR;
  class client plain;
  class cluster cluster;
 ```
+
+Did you notice that some diagram elements are colored blue? That is accomplished using a `classDef` statement to define a class of style attributes, and a `class` statement to define the elements to apply that class to.
+
+In the diagram above, we have one class of stying attributes called `k8s` and defined with the following:
+```
+classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
+```
+Further down, we attach the `k8s` class to the specific elements with the following:
+```
+class ingress,service,pod1,pod2 k8s; // k8s class is applied to elements ingress, service, pod1 and pod2.
+```
+
+
+
+
 
 ---
 
